@@ -1,0 +1,311 @@
+/*transition is very important */
+/*transition is very important */
+/*transition is very important */
+/*transition is very important */
+
+
+.transition {
+
+    background-color: #eee;
+    width: 500px;
+    height: 200px;
+    transition-duration: 2s;
+    transition-delay: .2s;
+    transition-property: all;
+    transition-timing-function: ease;
+
+
+    transition: 2s .2s all ease;
+}
+
+.transition:hover {
+    width: 700px;
+    height: 280px;
+
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+
+.important {
+    background-color: blue !important;
+    background-color: red;
+
+    /* take a look ==> backgroung color is blue in page because you add !important after blue color */
+}
+
+
+/*  */
+/*  */
+/*  CSS VARIABLES*/
+/*  */
+
+
+.main {
+    background-color: var(--maincolor, black);
+    color: white;
+    padding: var(--mainpadding);
+}
+
+:root {
+    --maincolor: blue;
+    --mainpadding: 20px;
+    /* look here you must write (--) bafore mainthing like --maincolor , if you dont write this your code doesn't work */
+}
+
+/* 
+here we add main color or padding ...ETC in root (like global variable in your page) 
+then you add var() in any code and put in it mainthing like maincolor , mainpadding ....ETC
+if may need to add recovery color if your maincolor doesnt work you can add like this black color==> var(--maincolor, black)
+*/
+
+/* you con use maincolor in local variable like 
+.main {
+    --maincolor: red;
+    background-color: var(--maincolor);
+    color: white;
+    padding: var(--mainpadding);
+*/
+
+
+/*  */
+/*  */
+/*  */
+/* differnt between float and flex box */
+/*  */
+
+/* 
+flex box
+for parent
+-- display: flex;         == to start flex box
+-- flex-direction: row;   == default value
+-- flex-wrap: nowrap;     == default value
+-- flex-flow : [flex-direction] + [flex-wrap]
+*/
+
+/* ==some of flex direction and flex wrap==
+    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse; */
+
+.flex {
+    /* overflow: hidden; */
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    /* when we use  (display:flex)  we dont need to use float and overflow */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    /* justify-content: space-between ==> we put space between element without calc it when we edit any numberlike width ...ETC */
+}
+
+.flex div {
+    background-color: red;
+    color: white;
+    /* float: left; */
+    width: 17%;
+    text-align: center;
+    padding: 20px;
+
+}
+
+
+
+
+.float {
+    overflow: hidden;
+    background-color: #eee;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.float div {
+    background-color: red;
+    color: white;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+
+/*  */
+/*  JUSTIFY-CONTENT ------- ALIGN-ITEM*/
+/*  */
+/*  */
+/*  */
+
+.center {
+    background-color: blue;
+    color: #eee;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* very very important */
+}
+
+
+
+/* very very very very very important */
+/*  flex box -- grow, shrink , order*/
+/*  flex box -- flex basis , flex shorthands*/
+/*  flex box -- align-self*/
+/*  read sketch to understand well*/
+/*  */
+
+.flex-2 {
+    background-color: #eee;
+    width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+}
+
+.flex-2 div {
+
+    background-color: red;
+    color: white;
+    width: 20px;
+    text-align: center;
+    margin-right: 5px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.order {
+    order: 6;
+
+}
+
+.flex-basis {
+    flex-basis: 300px
+}
+
+.flex-shorthand {
+    flex: 2 2 150px;
+    /* flex = [flex-grow] + [flex-shrink] + [flex-basis]
+            =    2              2              150px
+*/
+}
+
+.align-self {
+    align-self: flex-end;
+    /* justify-content: flex-end; */
+}
+
+/*  */
+/*  */
+/*  filters*/
+/*  */
+
+.img {
+    width: 350px;
+    height: 250px;
+    filter: grayscale(100%);
+}
+
+img:hover {
+    filter: grayscale(0);
+
+}
+
+/* important 3 filters ==> grayscale , blur , invert  */
+
+
+
+/*  */
+/*  */
+/*  gradient*/
+/*  */
+
+.gradient {
+    width: 350px;
+    height: 250px;
+    background-image: linear-gradient(to right, red, blue);
+}
+
+
+.gradient-2 {
+    width: 350px;
+    height: 150px;
+    background-color: #eee;
+    margin: 20px;
+    position: relative;
+    padding: 10px;
+
+}
+
+.gradient-2::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    background-image: linear-gradient(to right, red 20%, blue 20%, blue 40%, green 40%, green 60%, gray 60%, gray 80%, black 80%);
+
+}
+
+/*  */
+/* pointer event and caret color */
+/*  */
+/*  */
+
+.pointer-events {
+    pointer-events: none;
+}
+
+.p-caret-color {
+    caret-color: red;
+}
+
+.t-caret-color {
+    caret-color: red;
+}
+
+/* go to sketsh to learn it perfect */
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {}

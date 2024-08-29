@@ -1,0 +1,411 @@
+    .in-photo {
+        color: brown;
+        font-size: 10px;
+    }
+
+    .my-p {
+        color: blueviolet;
+        font-size: 20px;
+    }
+
+    #my-p {
+        color: blue;
+        font-size: 30px;
+    }
+
+
+
+
+
+    .paragraph-div {
+        background-color: red;
+        /*col name*/
+        background-color: rgb(10 20 30/50%);
+        /*red green blue / alpha(الشفافيه)*/
+        background-color: #ff0000;
+        /*color hex code*/
+        background-image: url(../css/image/images.jpg);
+        /*background image*/
+        background-repeat: repeat;
+        /*photo duplicated in coloms and rows*/
+        background-repeat: repeat-x;
+        /*photo duplicated in rows*/
+        background-repeat: repeat-y;
+        /*photo duplicated in coloms*/
+        background-repeat: no-repeat;
+        /*photo not duplicated */
+
+        /* تذكر ان اخر كود يتم كتابته هو الذي يعمل بم انه كل الاكواد علي نفس اسم الكلاس */
+    }
+
+
+
+
+
+
+    .paragraph-div {
+        background-attachment: scroll;
+        /* (scroll) الصوره ثابته معاك وانت بتعمل */
+        background-attachment: fixed;
+        /* (scroll) الصوره بتتحرك معاك وانت بتعمل */
+
+        background-position: left top;
+        background-position: 20px 50px;
+        background-position: 20% 50%;
+        /* control position of photo */
+
+        background-size: 20px 50px;
+        /* control size of photo */
+        background-size: contain;
+        /* cover all content but stretched with minimize page etc */
+        background-size: cover;
+        /* cover all  content */
+    }
+
+
+
+
+
+
+
+    .paragraph-div {
+        padding: 10px;
+        /* top right bottom left */
+        /* 10px 10px 10px 10px */
+
+        padding: 10px 20px;
+        /* top right bottom left */
+        /* 10px 20px 10px 20px */
+
+        padding: 10px 15px 20px;
+        /* top right bottom left */
+        /* 10px 15px 20px 15px */
+
+        padding: 10px 20px 30px 40px;
+        /* top right bottom left */
+        /* 10px 20px 30px 40px */
+
+        /*       اذن استنتجنا ان كل قيمه بتاخد من الي مقابلها لو احنا مكتبناهاش */
+    }
+
+
+
+
+
+
+
+    .paragraph-div {
+
+        padding: 100px;
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%;
+        margin: auto;
+
+        /*  معناها هوامش خارجيه (margin)  */
+        /* مساحه ال ديف 70% من مساحه الجزء المحدد */
+        /* هنا عملنا الهامش من اليمين و اليسار 15 */
+        /*  بينسق من اليمين و الشمال قد بعض  margin auto  لو عملنا    */
+
+    }
+
+
+
+
+
+    .paragraph-div {
+        border-width: 10px;
+        border-color: red;
+        border-style: solid;
+
+        border: 10px red solid;
+        /* hint - color is not appear if you dont write border style */
+        /* border location in page is between padding and margin  */
+    }
+
+    /* outline = we dont discuss because its not important */
+
+
+
+
+
+
+
+
+
+
+
+
+    .span-1 {
+        background-color: #eee;
+        display: block;
+        padding: 50px;
+        margin: 10px;
+        width: 70%;
+        height: 20px;
+    }
+
+
+    .span-2 {
+        background-color: rgb(136, 96, 96);
+        display: inline;
+        padding: 50px;
+        margin: 10px;
+    }
+
+
+    .span-3 {
+        background-color: rgb(193, 15, 15);
+        display: inline-block;
+        padding: 50px;
+        margin: 10px;
+        width: 70%;
+        height: 20px;
+    }
+
+    /* 
+display: block;
+
+- take full width if no width
+- add line break
+- respect padding margin wedth hight
+
+
+display: inline;
+
+- dont respect width hight
+- respect padding and margin ( just left + right)
+- dont add line break
+- allow elements before and after it 
+
+
+display: inline-block;
+
+- allow elements before and after it 
+- respect padding margin wedth hight
+*/
+
+
+    .one {
+        padding: 10px;
+        border-bottom: 2px solid red;
+        color: red;
+        margin: 10px 0;
+        background-color: #eee;
+    }
+
+    .two {
+        padding: 10px;
+        border-bottom: 2px solid green;
+        color: green;
+        margin: 10px 0;
+        background-color: #eee;
+    }
+
+    .three {
+        padding: 10px;
+        border-bottom: 2px solid blue;
+        color: blue;
+        margin: 10px 0;
+        background-color: #eee;
+    }
+
+    .four {
+        padding: 10px;
+        border-bottom: 2px solid black;
+        color: black;
+        margin: 10px 0;
+        background-color: #eee;
+    }
+
+
+
+
+    .one,
+    .two,
+    .three,
+    .four {
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #eee;
+    }
+
+    /* هنا بنجمع كل الخواص المشتركه و نحطها مع بعض و الخواص ال تخص كل عنصر لواحده بنعملها بقي لواحدها عادي */
+
+
+
+    .nesting p {
+        color: #ff0000;
+        /* here we color paragraph in nesting alone without color any paragraphs in page
+        because this p is into div we name nesting */
+    }
+
+
+    .dimentions {
+        background-color: darkgrey;
+        padding: 10px;
+        display: inline-block;
+        width: 300px;
+        width: fit-content;
+        min-width: 400px;
+        max-width: 600px;
+        min-height: 10px;
+        max-height: 30px;
+        /* width: fit-content  =  fit the content  */
+        overflow: auto;
+        /* overflow-x: hidden; = control   row  by hidden , auto , ETC*/
+        /* overflow-y: scroll; = control column by hidden , auto , ETC*/
+    }
+
+
+    .text-shadow {
+        background-color: #eee;
+        color: blue;
+        text-shadow: 1px 1px 1px red;
+        /* text-shadow : h-shadow  v-shadow  blur  color  */
+    }
+
+
+    .text-alighnment {
+        text-align: center;
+        direction: ltr;
+
+    }
+
+
+    .text-decoration {
+        text-decoration: line-through;
+        text-decoration: underline;
+        text-decoration: none;
+        /* text-decoration: none;  = we use this if we have link and we need to remove underline  */
+        text-transform: capitalize;
+        /* text-transform: capitalize;  = we use this if we need to remove start-letters only to capital */
+        text-transform: uppercase;
+        /* text-transform: uppercase;  = we use this if we need to remove all letters to capital */
+    }
+
+
+    .text-spacing {
+        letter-spacing: -2px;
+        letter-spacing: 2px;
+        /* space between letters */
+        word-spacing: 8px;
+        /* space between words */
+        text-indent: 60px;
+        /* مساحه فارغه تستخدم مثلا لتظبيط الكلام فوق بعض او اخراج الكلام من الصفحه بحيث يكون موجود بس محدش شايفه */
+        line-height: 1.7;
+        /* hight between lines */
+
+
+        /*
+        white-space: nowrap;    = keep words in same line without going new line ,whatever dig of words . 
+        word-break: break-all;  = if we have anything and we have to break it into new line 
+        word-break: break-word; = if we have   link   and we have to break it into new line 
+         */
+
+    }
+
+
+    .text-overflow {
+        background-color: #eee;
+        padding: 10px;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* text-overflow = control overflow text  */
+    }
+
+
+
+
+    .inherit {
+        text-align: center;
+        padding: 20px;
+        background-color: #eee;
+        font-size: 20px;
+        border: 2px solid blue;
+    }
+
+    .inherit p {
+        border: inherit;
+        padding: inherit;
+
+
+        /*  border : inherit; بيورث كل شئ من ال (ديف) الاب 
+        padding: inherit;  بيورث كل شئ من ال (ديف) الاب 
+        abcd   : inherit; بيورث كل شئ من ال (ديف) الاب 
+        */
+    }
+
+
+    .font-family {
+        background-color: #eee;
+        padding: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        /* search for google fonts , better than this type 
+        when you go to google fonts and select font you need ,google give you all links to use font and name of font
+        you must add links to head of page and add name of font in css code in(body)or (div) ass you need */
+    }
+
+
+    .body {
+        font-size: 40px;
+    }
+
+    .-div- {
+        font-size: 20px;
+    }
+
+    .-div- .-span- {
+        font-size: 5vw;
+        /* if you open page now then open inspect and change width by hold page and scroll left and wright , 
+            this span is the only thing changing font size because we use vw function */
+
+
+        /*
+CSS UNITS 
+    -px         =
+    -em         = time  ==>   like  ( 1 em = 1 time ) (موضحه اكثر داخل الاسكتش لو مفهمتهاش هنا )
+    -rem        = root time   like em but   root element of web page is HTML , default font-size of web page = 16px
+    -percentage =
+    -vw         = view port width      (  موضحه اكثر داخل الاسكتش   )
+
+    -vmin       = view port hight                 serch in google for this
+    -vh         =                                 serch in google for this
+
+*/
+    }
+
+
+    .font-weight {
+        font-weight: bold;
+
+    }
+
+
+
+
+
+
+
+    .float-and-clear {
+        background-color: red;
+        padding: 20px;
+    }
+
+    .float-and-clear div {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        background-color: #eee;
+        float: left;
+        width: 25%;
+        /* margin-left: 10px; */
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    /* after any float you must use clear   (  موضحه اكثر داخل الاسكتش   )*/
